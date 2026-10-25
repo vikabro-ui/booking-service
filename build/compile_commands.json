@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/vikabro/back/project1/build",
+  "command": "/usr/bin/g++ -DCPPHTTPLIB_OPENSSL_SUPPORT -I/home/vikabro/back/project1/build/_deps/nlohmann_json-src/include -isystem /home/vikabro/back/project1/build/_deps/cpp-httplib-src -g -std=gnu++17 -o CMakeFiles/booking_service.dir/main.cpp.o -c /home/vikabro/back/project1/main.cpp",
+  "file": "/home/vikabro/back/project1/main.cpp",
+  "output": "CMakeFiles/booking_service.dir/main.cpp.o"
+}
+]
