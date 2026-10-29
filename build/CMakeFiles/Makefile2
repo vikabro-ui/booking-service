@@ -66,17 +66,20 @@ CMAKE_BINARY_DIR = /home/vikabro/back/project1/build
 all: CMakeFiles/booking_service.dir/all
 all: _deps/cpp-httplib-build/all
 all: _deps/nlohmann_json-build/all
+all: _deps/pqxx-build/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: _deps/cpp-httplib-build/preinstall
 preinstall: _deps/nlohmann_json-build/preinstall
+preinstall: _deps/pqxx-build/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/booking_service.dir/clean
 clean: _deps/cpp-httplib-build/clean
 clean: _deps/nlohmann_json-build/clean
+clean: _deps/pqxx-build/clean
 .PHONY : clean
 
 #=============================================================================
@@ -110,10 +113,58 @@ _deps/nlohmann_json-build/clean:
 .PHONY : _deps/nlohmann_json-build/clean
 
 #=============================================================================
+# Directory level rules for directory _deps/pqxx-build
+
+# Recursive "all" directory target.
+_deps/pqxx-build/all: _deps/pqxx-build/src/all
+_deps/pqxx-build/all: _deps/pqxx-build/include/all
+.PHONY : _deps/pqxx-build/all
+
+# Recursive "preinstall" directory target.
+_deps/pqxx-build/preinstall: _deps/pqxx-build/src/preinstall
+_deps/pqxx-build/preinstall: _deps/pqxx-build/include/preinstall
+.PHONY : _deps/pqxx-build/preinstall
+
+# Recursive "clean" directory target.
+_deps/pqxx-build/clean: _deps/pqxx-build/src/clean
+_deps/pqxx-build/clean: _deps/pqxx-build/include/clean
+.PHONY : _deps/pqxx-build/clean
+
+#=============================================================================
+# Directory level rules for directory _deps/pqxx-build/include
+
+# Recursive "all" directory target.
+_deps/pqxx-build/include/all:
+.PHONY : _deps/pqxx-build/include/all
+
+# Recursive "preinstall" directory target.
+_deps/pqxx-build/include/preinstall:
+.PHONY : _deps/pqxx-build/include/preinstall
+
+# Recursive "clean" directory target.
+_deps/pqxx-build/include/clean:
+.PHONY : _deps/pqxx-build/include/clean
+
+#=============================================================================
+# Directory level rules for directory _deps/pqxx-build/src
+
+# Recursive "all" directory target.
+_deps/pqxx-build/src/all: _deps/pqxx-build/src/CMakeFiles/pqxx.dir/all
+.PHONY : _deps/pqxx-build/src/all
+
+# Recursive "preinstall" directory target.
+_deps/pqxx-build/src/preinstall:
+.PHONY : _deps/pqxx-build/src/preinstall
+
+# Recursive "clean" directory target.
+_deps/pqxx-build/src/clean: _deps/pqxx-build/src/CMakeFiles/pqxx.dir/clean
+.PHONY : _deps/pqxx-build/src/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/booking_service.dir
 
 # All Build rule for target.
-CMakeFiles/booking_service.dir/all:
+CMakeFiles/booking_service.dir/all: _deps/pqxx-build/src/CMakeFiles/pqxx.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/booking_service.dir/build.make CMakeFiles/booking_service.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/booking_service.dir/build.make CMakeFiles/booking_service.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vikabro/back/project1/build/CMakeFiles --progress-num=1,2 "Built target booking_service"
@@ -121,7 +172,7 @@ CMakeFiles/booking_service.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/booking_service.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vikabro/back/project1/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vikabro/back/project1/build/CMakeFiles 30
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/booking_service.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vikabro/back/project1/build/CMakeFiles 0
 .PHONY : CMakeFiles/booking_service.dir/rule
@@ -134,6 +185,32 @@ booking_service: CMakeFiles/booking_service.dir/rule
 CMakeFiles/booking_service.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/booking_service.dir/build.make CMakeFiles/booking_service.dir/clean
 .PHONY : CMakeFiles/booking_service.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/pqxx-build/src/CMakeFiles/pqxx.dir
+
+# All Build rule for target.
+_deps/pqxx-build/src/CMakeFiles/pqxx.dir/all:
+	$(MAKE) $(MAKESILENT) -f _deps/pqxx-build/src/CMakeFiles/pqxx.dir/build.make _deps/pqxx-build/src/CMakeFiles/pqxx.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps/pqxx-build/src/CMakeFiles/pqxx.dir/build.make _deps/pqxx-build/src/CMakeFiles/pqxx.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vikabro/back/project1/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 "Built target pqxx"
+.PHONY : _deps/pqxx-build/src/CMakeFiles/pqxx.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/pqxx-build/src/CMakeFiles/pqxx.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vikabro/back/project1/build/CMakeFiles 28
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/pqxx-build/src/CMakeFiles/pqxx.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vikabro/back/project1/build/CMakeFiles 0
+.PHONY : _deps/pqxx-build/src/CMakeFiles/pqxx.dir/rule
+
+# Convenience name for target.
+pqxx: _deps/pqxx-build/src/CMakeFiles/pqxx.dir/rule
+.PHONY : pqxx
+
+# clean rule for target.
+_deps/pqxx-build/src/CMakeFiles/pqxx.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps/pqxx-build/src/CMakeFiles/pqxx.dir/build.make _deps/pqxx-build/src/CMakeFiles/pqxx.dir/clean
+.PHONY : _deps/pqxx-build/src/CMakeFiles/pqxx.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

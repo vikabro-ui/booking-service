@@ -1,11 +1,15 @@
+#include <exception>
 #include <iostream>
 #include "httplib.h"
 #include <nlohmann/json.hpp>
 #include <vector>
 #include <algorithm> 
+#include <pqxx/pqxx>
 
 using json = nlohmann::json;
-
+std::string get_db_connection_string() {
+    return "dbname=booking_db user=postgres password=12082008 host=127.0.0.1 port=5432";
+}
 int main() {
 
     std::vector<json> rooms_storage = {
@@ -18,166 +22,240 @@ int main() {
     std::vector<json> bookings_storage;
     int next_booking_id = 1; 
 
+    try {
+        pqxx::connection conn(get_db_connection_string());
+        if (conn.is_open()) {
+            std::cout << "[DB] Успешное подключение к PostgreSQL! База: " << conn.dbname() << std::endl;
+        }
+    } catch (const std::exception &e) {
+        std::cerr << "[DB Error] Ошибка подключения к базе данных: " << e.what() << std::endl;
+        return 1;
+    }
+
     httplib::Server svr;
+
+
 
     // Регистрация 
     svr.Post("/api/v1/register", [&](const httplib::Request& req, httplib::Response& res) {
+        try{
         json request_data = json::parse(req.body);
         std::string username = request_data["username"];
         std::string password = request_data["password"];
 
-        std::string telegram_chat_id = "";
-        if (request_data.contains("telegram_chat_id")) {
-            telegram_chat_id = request_data["telegram_chat_id"];
-        }
-
-        json response;
-
-        auto it = std::find_if(users_storage.begin(), users_storage.end(), [username](const json& user) {
-            return user["username"] == username;
-        });
-
-        if (it != users_storage.end()) {
-            response["status"] = "error";
-            response["message"] = "Пользователь с таким именем уже существует!";
-            res.status = 400;
-        } else {
-            int current_id = next_user_id++;
-            
-            json new_user = {
-                {"id", current_id},
-                {"username", username},
-                {"password", password},
-                {"telegram_chat_id", telegram_chat_id} 
+        if(!request_data.contains("telegram_chat_id")|| request_data["telegram_chat_id"].get<std::string>().empty())
+        {
+            json error = {
+                {"status", "error"},
+                {"message", "Поле 'telegram_chat_id' является обязательным для регистрации!"}
             };
-
-            users_storage.push_back(new_user);
-
-            response["status"] = "success";
-            response["message"] = "Регистрация прошла успешно!";
-            response["user_id"] = current_id;
-            res.status = 201;
+            res.status = 400;
+            res.set_content(error.dump(4), "application/json");
+            return;
         }
 
-        res.set_content(response.dump(), "application/json");
+        std::string telegram_chat_id = request_data["telegram_chat_id"];
+        pqxx::connection conn(get_db_connection_string());
+        pqxx::work txn(conn);
+        
+        pqxx::result res_insert=txn.exec_params("INSERT INTO users(username, password, telegram_chat_id) VALUES($1,$2,$3) RETURNING id;",
+        username, password, telegram_chat_id);
+
+        txn.commit();
+
+        int user_id=res_insert[0]["id"].as<int>();
+        json response = {
+            {"status", "success"},
+            {"message", "Регистрация прошла успешно!"},
+            {"user_id", user_id}
+        };
+        res.status = 201;
+        res.set_content(response.dump(4), "application/json");
+    } catch(const std::exception &e)
+        {
+        json error = {{"status", "error"}, {"message", "Пользователь с таким именем уже существует или ошибка БД: " + std::string(e.what())}};
+        res.status = 400;
+        res.set_content(error.dump(4), "application/json");
+        }
     });
 
     // Вход
     svr.Post("/api/v1/login", [&](const httplib::Request& req, httplib::Response& res) {
+       try
+       {
         json request_data = json::parse(req.body);
         std::string username = request_data["username"];
         std::string password = request_data["password"];
 
+
+        pqxx::connection conn(get_db_connection_string());
+        pqxx::work txn(conn);
+        
+        pqxx::result result = txn.exec_params(
+            "SELECT id, password FROM users WHERE username = $1;",
+            username
+        );
         json response;
-
-        auto it = std::find_if(users_storage.begin(), users_storage.end(), [username](const json& user) {
-            return user["username"] == username;
-        });
-
-        if (it != users_storage.end() && (*it)["password"] == password) {
+        if (!result.empty() && result[0]["password"].as<std::string>() == password) {
             response["status"] = "success";
             response["message"] = "Вход выполнен успешно!";
-            response["user_id"] = (*it)["id"]; 
+            response["user_id"] = result[0]["id"].as<int>();
             res.status = 200;
         } else {
             response["status"] = "error";
             response["message"] = "Неверное имя пользователя или пароль!";
-            res.status = 401; 
+            res.status = 401; // Unauthorized
+        }
+        res.set_content(response.dump(4), "application/json");
+       }
+        catch(const std::exception &e)
+        {
+            json error = {{"status", "error"}, {"message", e.what()}};
+        res.status = 500;
+        res.set_content(error.dump(4), "application/json");
         }
 
-        res.set_content(response.dump(), "application/json");
     });
 
     // Получить список комнат (с фильтром min_capacity)
-    svr.Get("/api/v1/rooms", [&](const httplib::Request& req, httplib::Response& res) {
-        json response = json::array();
+        svr.Get("/api/v1/rooms", [](const httplib::Request& req, httplib::Response& res) {
+        try {
+            pqxx::connection conn(get_db_connection_string());
+            pqxx::work txn(conn);
 
-        if (req.has_param("min_capacity")) {
-            int min_cap = std::stoi(req.get_param_value("min_capacity"));
-            for (const auto& room : rooms_storage) {
-                if (room["capacity"] >= min_cap) {
-                    response.push_back(room);
-                }
+            pqxx::result result;
+
+            if (req.has_param("min_capacity")) {
+                std::string min_cap_str = req.get_param_value("min_capacity");
+                int min_capacity = std::stoi(min_cap_str);
+
+                result = txn.exec_params(
+                    "SELECT id, name, capacity FROM rooms WHERE capacity >= $1;",
+                    min_capacity
+                );
+            } else {
+                result = txn.exec("SELECT id, name, capacity FROM rooms;");
             }
-        } else {
-            for (const auto& room : rooms_storage) {
-                response.push_back(room);
+
+            json rooms_array = json::array();
+            for (auto row : result) {
+                json room;
+                room["id"] = row["id"].as<int>();
+                room["name"] = row["name"].as<std::string>();
+                room["capacity"] = row["capacity"].as<int>();
+                rooms_array.push_back(room);
             }
+
+            res.set_content(rooms_array.dump(4), "application/json");
+        } catch (const std::exception &e) {
+            json error = {{"error", e.what()}};
+            res.status = 500;
+            res.set_content(error.dump(), "application/json");
         }
-
-        json final_response;
-        final_response["status"] = "success";
-        final_response["rooms"] = response;
-
-        res.status = 200;
-        res.set_content(final_response.dump(), "application/json");
     });
   
     // Получить список бронирований (всех или с фильтром по интервалу времени)
     svr.Get("/api/v1/bookings", [&](const httplib::Request& req, httplib::Response& res) {
-        json response;
+        try{
+            pqxx::connection conn(get_db_connection_string());
+            pqxx::work txn(conn);
+            pqxx::result result;
 
-        if (req.has_param("start_hour") && req.has_param("end_hour")) {
-            int query_start = std::stoi(req.get_param_value("start_hour"));
-            int query_end = std::stoi(req.get_param_value("end_hour"));
+            std::string base_query=
+            "SELECT b.id, b.room_id, r.name as room_name, b.user_id, u.username, b.start_hour, b.end_hour "
+            "FROM bookings b"
+            "JOIN rooms r ON b.room_id=r.id"
+            "JOIN users u ON b.user_id=u.id";
 
-            json filtered_bookings = json::array();
 
-            for (const auto& booking : bookings_storage) {
-                int b_start = booking["start_hour"];
-                int b_end = booking["end_hour"];
-
-                if (query_start < b_end && b_start < query_end) {
-                    filtered_bookings.push_back(booking);
-                }
+            if(req.has_param("start_hour") && req.has_param("end_hour"))
+            {
+                int q_start = std::stoi(req.get_param_value("start_hour"));
+                int q_end = std::stoi(req.get_param_value("end_hour"));
+                result=txn.exec_params(base_query + "WHERE $1<b.end_hour AND b.start_hour<$2;", q_start, q_end);
+            
             }
 
-            response["status"] = "success";
-            response["filter"] = {{"start_hour", query_start}, {"end_hour", query_end}};
-            response["bookings"] = filtered_bookings;
-            res.status = 200;
-            res.set_content(response.dump(), "application/json");
-            return;
+            else { result = txn.exec(base_query + ";"); }
+
+            json bookings_array = json::array();
+                for (auto row : result) {
+            json booking;
+            booking["id"] = row["id"].as<int>();
+            booking["room_id"] = row["room_id"].as<int>();
+            booking["room_name"] = row["room_name"].as<std::string>();
+            booking["user_id"] = row["user_id"].as<int>();
+            booking["username"] = row["username"].as<std::string>();
+            booking["start_hour"] = row["start_hour"].as<int>();
+            booking["end_hour"] = row["end_hour"].as<int>();
+            bookings_array.push_back(booking);
         }
 
-        response["status"] = "success";
-        response["bookings"] = bookings_storage; 
+        json response = {
+            {"status", "success"},
+            {"bookings", bookings_array}
+        };
         res.status = 200;
-        res.set_content(response.dump(), "application/json");
+        res.set_content(response.dump(4), "application/json");
+
+        }
+        catch(const std::exception &e)
+        { 
+            json error = {{"error", e.what()}};
+            res.status = 500;
+            res.set_content(error.dump(4), "application/json");
+        }
     });
 
     // Получить историю бронирования конкретного пользователя 
     svr.Get("/api/v1/users/:id/bookings", [&](const httplib::Request& req, httplib::Response& res) {
-        json response;
+        try{
         int user_id = std::stoi(req.path_params.at("id"));
-        
-        auto user_it = std::find_if(users_storage.begin(), users_storage.end(), [user_id](const json& user) {
-            return user["id"] == user_id;
-        });
+        pqxx::connection conn(get_db_connection_string());
+        pqxx::work txn(conn);
+        pqxx::result user_check=txn.exec_params("SELECT id FROM users WHERE id=$1;", user_id);
 
-        if (user_it == users_storage.end()) {
-            response["status"] = "error";
-            response["message"] = "Пользователь с таким ID не найден!";
+        if (user_check.empty()) {
+            json error = {{"status", "error"}, {"message", "Пользователь с таким ID не найден!"}};
             res.status = 404;
-            res.set_content(response.dump(), "application/json");
-            return; 
+            res.set_content(error.dump(4), "application/json");
+            return;
+        }
+            pqxx::result result=txn.exec_params("SELECT b.id, b.room_id, r.name as room_name, b.user_id, u.username, b.start_hour, b.end_hour "
+            "FROM bookings b"
+            "JOIN rooms r ON b.room_id=r.id"
+            "JOIN users u ON b.user_id=u.id"
+            "WHERE b.user_id=$1;", user_id);
+
+
+        json user_bookings = json::array();
+        for (auto row : result) {
+            json booking;
+            booking["id"] = row["id"].as<int>();
+            booking["room_id"] = row["room_id"].as<int>();
+            booking["room_name"] = row["room_name"].as<std::string>();
+            booking["user_id"] = row["user_id"].as<int>();
+            booking["username"] = row["username"].as<std::string>();
+            booking["start_hour"] = row["start_hour"].as<int>();
+            booking["end_hour"] = row["end_hour"].as<int>();
+            user_bookings.push_back(booking);
         }
 
-        std::vector<json> user_bookings;
-        for (const auto& booking : bookings_storage) {
-            if (booking["user_id"] == user_id) {
-                user_bookings.push_back(booking);
-            }
-        }
-
-        response["status"] = "success";
-        response["user_id"] = user_id;
-        response["bookings"] = user_bookings;
+        json response = {
+            {"status", "success"},
+            {"user_id", user_id},
+            {"bookings", user_bookings}
+        };
         res.status = 200;
-
-        res.set_content(response.dump(), "application/json");
+        res.set_content(response.dump(4), "application/json");
+    } catch (const std::exception &e) {
+        json error = {{"error", e.what()}};
+        res.status = 500;
+        res.set_content(error.dump(4), "application/json");
+    }
     });
 
+    //ТУТ 
     // Создать бронирование 
     svr.Post("/api/v1/bookings", [&](const httplib::Request& req, httplib::Response& res) {
         json request_data = json::parse(req.body);

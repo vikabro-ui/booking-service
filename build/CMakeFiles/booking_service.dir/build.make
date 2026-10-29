@@ -92,8 +92,10 @@ booking_service_EXTERNAL_OBJECTS =
 
 booking_service: CMakeFiles/booking_service.dir/main.cpp.o
 booking_service: CMakeFiles/booking_service.dir/build.make
+booking_service: _deps/pqxx-build/src/libpqxx-7.9.a
 booking_service: /usr/lib/x86_64-linux-gnu/libssl.so
 booking_service: /usr/lib/x86_64-linux-gnu/libcrypto.so
+booking_service: /usr/lib/x86_64-linux-gnu/libpq.so
 booking_service: CMakeFiles/booking_service.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vikabro/back/project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable booking_service"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/booking_service.dir/link.txt --verbose=$(VERBOSE)

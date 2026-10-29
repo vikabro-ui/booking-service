@@ -138,6 +138,26 @@
 			"path" : "/usr/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in"
 		},
 		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindGit.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in"
+		},
+		{
 			"isGenerated" : true,
 			"path" : "build/_deps/cpp-httplib-src/CMakeLists.txt"
 		},
@@ -319,6 +339,209 @@
 		{
 			"isGenerated" : true,
 			"path" : "build/_deps/nlohmann_json-src/cmake/config.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/cmake/config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CheckIncludeFileCXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CheckFunctionExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPostgreSQL.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_CHARCONV_FLOAT.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_CHARCONV_INT.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_CMP.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_CONCEPTS.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_CXA_DEMANGLE.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_GCC_PURE.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_GCC_VISIBILITY.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_MULTIDIM.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_PATH.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_POLL.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_SLEEP_FOR.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_SPAN.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_SSIZE.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_STRERROR_R.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_STRERROR_S.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_THREAD_LOCAL.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/config-tests/no_need_fslib.cxx"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-build/include/pqxx/config_cmake.h.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-build/include/pqxx/config_cmake.h.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-build/include/pqxx/config_cmake.h.in"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/cmake/libpqxx-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CPack.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CPackComponent.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Templates/CPackConfig.cmake.in"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Templates/CPackConfig.cmake.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/src/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/libpqxx.pc.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/pqxx-src/include/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

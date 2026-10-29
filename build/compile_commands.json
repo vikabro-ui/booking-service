@@ -1,8 +1,170 @@
 [
 {
   "directory": "/home/vikabro/back/project1/build",
-  "command": "/usr/bin/g++ -DCPPHTTPLIB_OPENSSL_SUPPORT -I/home/vikabro/back/project1/build/_deps/nlohmann_json-src/include -isystem /home/vikabro/back/project1/build/_deps/cpp-httplib-src -g -std=gnu++17 -o CMakeFiles/booking_service.dir/main.cpp.o -c /home/vikabro/back/project1/main.cpp",
+  "command": "/usr/bin/g++ -DCPPHTTPLIB_OPENSSL_SUPPORT -I/home/vikabro/back/project1/build/_deps/nlohmann_json-src/include -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -isystem /home/vikabro/back/project1/build/_deps/cpp-httplib-src -g -std=gnu++17 -o CMakeFiles/booking_service.dir/main.cpp.o -c /home/vikabro/back/project1/main.cpp",
   "file": "/home/vikabro/back/project1/main.cpp",
   "output": "CMakeFiles/booking_service.dir/main.cpp.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/array.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/array.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/array.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/array.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/binarystring.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/binarystring.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/binarystring.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/binarystring.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/blob.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/blob.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/blob.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/blob.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/connection.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/connection.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/connection.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/connection.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/cursor.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/cursor.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/cursor.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/cursor.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/encodings.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/encodings.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/encodings.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/encodings.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/errorhandler.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/errorhandler.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/errorhandler.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/errorhandler.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/except.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/except.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/except.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/except.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/field.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/field.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/field.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/field.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/largeobject.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/largeobject.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/largeobject.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/largeobject.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/notification.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/notification.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/notification.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/notification.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/params.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/params.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/params.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/params.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/pipeline.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/pipeline.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/pipeline.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/pipeline.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/result.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/result.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/result.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/result.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/robusttransaction.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/robusttransaction.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/robusttransaction.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/robusttransaction.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/row.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/row.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/row.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/row.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/sql_cursor.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/sql_cursor.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/sql_cursor.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/sql_cursor.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/strconv.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/strconv.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/strconv.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/strconv.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/stream_from.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/stream_from.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/stream_from.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/stream_from.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/stream_to.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/stream_to.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/stream_to.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/stream_to.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/subtransaction.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/subtransaction.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/subtransaction.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/subtransaction.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/time.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/time.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/time.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/time.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/transaction.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/transaction.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/transaction.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/transaction.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/transaction_base.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/transaction_base.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/transaction_base.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/transaction_base.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/util.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/util.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/util.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/util.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/version.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/version.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/version.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/version.cxx.o"
+},
+{
+  "directory": "/home/vikabro/back/project1/build/_deps/pqxx-build/src",
+  "command": "/usr/bin/g++  -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -I/usr/include/postgresql -g -std=c++17 -o CMakeFiles/pqxx.dir/wait.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/src/wait.cxx",
+  "file": "/home/vikabro/back/project1/build/_deps/pqxx-src/src/wait.cxx",
+  "output": "_deps/pqxx-build/src/CMakeFiles/pqxx.dir/wait.cxx.o"
 }
 ]

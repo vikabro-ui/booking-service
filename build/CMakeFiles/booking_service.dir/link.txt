@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/booking_service.dir/main.cpp.o -o booking_service  /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+/usr/bin/g++ -g CMakeFiles/booking_service.dir/main.cpp.o -o booking_service  _deps/pqxx-build/src/libpqxx-7.9.a /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so /usr/lib/x86_64-linux-gnu/libpq.so 

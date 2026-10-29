@@ -9,7 +9,8 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
@@ -46,6 +47,51 @@
 					"parentIndex" : 0,
 					"projectIndex" : 2,
 					"source" : "build/_deps/nlohmann_json-src"
+				},
+				{
+					"build" : "_deps/pqxx-build",
+					"childIndexes" : 
+					[
+						4,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.pqxx-build-Debug-2dc5e5d3d4838d82b7fb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "build/_deps/pqxx-src"
+				},
+				{
+					"build" : "_deps/pqxx-build/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.pqxx-build.src-Debug-f242a4496066d2232383.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 3,
+					"source" : "build/_deps/pqxx-src/src",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "_deps/pqxx-build/include",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.pqxx-build.include-Debug-acbc8a272476761bf3c9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 3,
+					"source" : "build/_deps/pqxx-src/include"
 				}
 			],
 			"name" : "Debug",
@@ -55,7 +101,8 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
 					"directoryIndexes" : 
 					[
@@ -82,6 +129,20 @@
 					],
 					"name" : "nlohmann_json",
 					"parentIndex" : 0
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"name" : "libpqxx",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
 				}
 			],
 			"targets" : 
@@ -89,9 +150,16 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "booking_service::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-booking_service-Debug-5410484cce450afa6f0f.json",
+					"jsonFile" : "target-booking_service-Debug-1e06b289f6aee33f6724.json",
 					"name" : "booking_service",
 					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "pqxx::@66ab7911d5ca443c9296",
+					"jsonFile" : "target-pqxx-Debug-0f4b94df858e41889c91.json",
+					"name" : "pqxx",
+					"projectIndex" : 3
 				}
 			]
 		}

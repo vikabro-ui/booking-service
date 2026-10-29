@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/vikabro/back/project1/build/_deps/pqxx-subbuild/CMakeFiles/pqxx-populate"
+		},
+		{
+			"file" : "/home/vikabro/back/project1/build/_deps/pqxx-subbuild/CMakeFiles/pqxx-populate.rule"
+		},
+		{
+			"file" : "/home/vikabro/back/project1/build/_deps/pqxx-subbuild/CMakeFiles/pqxx-populate-complete.rule"
+		},
+		{
+			"file" : "/home/vikabro/back/project1/build/_deps/pqxx-subbuild/pqxx-populate-prefix/src/pqxx-populate-stamp/pqxx-populate-build.rule"
+		},
+		{
+			"file" : "/home/vikabro/back/project1/build/_deps/pqxx-subbuild/pqxx-populate-prefix/src/pqxx-populate-stamp/pqxx-populate-configure.rule"
+		},
+		{
+			"file" : "/home/vikabro/back/project1/build/_deps/pqxx-subbuild/pqxx-populate-prefix/src/pqxx-populate-stamp/pqxx-populate-download.rule"
+		},
+		{
+			"file" : "/home/vikabro/back/project1/build/_deps/pqxx-subbuild/pqxx-populate-prefix/src/pqxx-populate-stamp/pqxx-populate-install.rule"
+		},
+		{
+			"file" : "/home/vikabro/back/project1/build/_deps/pqxx-subbuild/pqxx-populate-prefix/src/pqxx-populate-stamp/pqxx-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/vikabro/back/project1/build/_deps/pqxx-subbuild/pqxx-populate-prefix/src/pqxx-populate-stamp/pqxx-populate-patch.rule"
+		},
+		{
+			"file" : "/home/vikabro/back/project1/build/_deps/pqxx-subbuild/pqxx-populate-prefix/src/pqxx-populate-stamp/pqxx-populate-test.rule"
+		},
+		{
+			"file" : "/home/vikabro/back/project1/build/_deps/pqxx-subbuild/pqxx-populate-prefix/src/pqxx-populate-stamp/pqxx-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"pqxx-populate"
+		],
+		"name" : "pqxx-populate"
+	}
+}

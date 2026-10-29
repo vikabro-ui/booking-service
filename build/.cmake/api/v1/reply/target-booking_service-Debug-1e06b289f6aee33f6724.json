@@ -11,12 +11,14 @@
 		"commands" : 
 		[
 			"add_executable",
-			"target_link_libraries"
+			"target_link_libraries",
+			"library_target_setup"
 		],
 		"files" : 
 		[
 			"CMakeLists.txt",
-			"build/_deps/cpp-httplib-src/CMakeLists.txt"
+			"build/_deps/cpp-httplib-src/CMakeLists.txt",
+			"build/_deps/pqxx-src/src/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -26,7 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 20,
+				"line" : 30,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 31,
 				"parent" : 0
 			},
 			{
@@ -36,13 +44,22 @@
 				"command" : 1,
 				"file" : 1,
 				"line" : 212,
-				"parent" : 2
+				"parent" : 3
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 81,
+				"parent" : 5
 			},
 			{
 				"command" : 1,
-				"file" : 0,
-				"line" : 21,
-				"parent" : 0
+				"file" : 2,
+				"line" : 29,
+				"parent" : 6
 			}
 		]
 	},
@@ -58,18 +75,26 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 2,
 					"define" : "CPPHTTPLIB_OPENSSL_SUPPORT"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 2,
 					"path" : "/home/vikabro/back/project1/build/_deps/nlohmann_json-src/include"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 2,
+					"path" : "/home/vikabro/back/project1/build/_deps/pqxx-build/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/vikabro/back/project1/build/_deps/pqxx-src/include"
+				},
+				{
+					"backtrace" : 2,
 					"isSystem" : true,
 					"path" : "/home/vikabro/back/project1/build/_deps/cpp-httplib-src"
 				}
@@ -79,7 +104,7 @@
 			{
 				"backtraces" : 
 				[
-					4
+					2
 				],
 				"standard" : "17"
 			},
@@ -87,6 +112,13 @@
 			[
 				0
 			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "pqxx::@66ab7911d5ca443c9296"
 		}
 	],
 	"id" : "booking_service::@6890427a1f51a3e7e1df",
@@ -103,13 +135,23 @@
 				"role" : "flags"
 			},
 			{
-				"backtrace" : 3,
+				"backtrace" : 2,
+				"fragment" : "_deps/pqxx-build/src/libpqxx-7.9.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libssl.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 3,
+				"backtrace" : 4,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libcrypto.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libpq.so",
 				"role" : "libraries"
 			}
 		],

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = -DCPPHTTPLIB_OPENSSL_SUPPORT
 
-CXX_INCLUDES = -I/home/vikabro/back/project1/build/_deps/nlohmann_json-src/include -isystem /home/vikabro/back/project1/build/_deps/cpp-httplib-src
+CXX_INCLUDES = -I/home/vikabro/back/project1/build/_deps/nlohmann_json-src/include -I/home/vikabro/back/project1/build/_deps/pqxx-build/include -I/home/vikabro/back/project1/build/_deps/pqxx-src/include -isystem /home/vikabro/back/project1/build/_deps/cpp-httplib-src
 
 CXX_FLAGS = -g -std=gnu++17
 

@@ -17,5 +17,15 @@ FetchContent_Declare(
     GIT_TAG v3.11.3
 )
 FetchContent_MakeAvailable(nlohmann_json)
+
+FetchContent_Declare(
+    pqxx
+    GIT_REPOSITORY https://github.com/jtv/libpqxx.git
+    GIT_TAG 7.9.2
+)
+
+set(SKIP_BUILD_TEST ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(pqxx)
+
 add_executable(booking_service main.cpp)
-target_link_libraries(booking_service PRIVATE httplib::httplib nlohmann_json::nlohmann_json)
+target_link_libraries(booking_service PRIVATE httplib::httplib nlohmann_json::nlohmann_json pqxx)
