@@ -8,12 +8,45 @@
 
 using json = nlohmann::json;
 
+const std::string TELEGRAM_BOT_TOKEN = "9106271602:AAGitfCML-VyslVEQpJksCvY2K1Ur0Ir7w0";
+
 std::string get_db_connection_string() {
     return "dbname=booking_db user=postgres password=12082008 host=127.0.0.1 port=5432";
 }
 
+void send_telegram_notification(const std::string& chat_id, const std::string& message)
+{
+    if (chat_id.empty() || TELEGRAM_BOT_TOKEN.empty())
+    {
+        return;
+    }
+
+    try
+    {
+        httplib::SSLClient cli("api.telegram.org");
+        cli.set_connection_timeout(0, 300000);
+        
+        json payload = 
+        {
+            {"chat_id", chat_id},
+            {"text", message}
+        };
+        std::string path = "/bot" + TELEGRAM_BOT_TOKEN + "/sendMessage";
+        auto res = cli.Post(path.c_str(), payload.dump(), "application/json");
+        if (res && res->status == 200) 
+        {
+            std::cout << "[Telegram] Уведомление успешно отправлено в чат " << chat_id << std::endl;
+        } else 
+        {
+            std::cerr << "[Telegram] Ошибка отправки, код ответа: " << (res ? std::to_string(res->status) : "нет ответа") << std::endl;
+        }
+    } catch (const std::exception& e) 
+    {
+        std::cerr << "[Telegram Exception] " << e.what() << std::endl;
+    }
+}
+
 int main() {
-    
     try {
         pqxx::connection conn(get_db_connection_string());
         if (conn.is_open()) {
@@ -92,7 +125,7 @@ int main() {
             } else {
                 response["status"] = "error";
                 response["message"] = "Неверное имя пользователя или пароль!";
-                res.status = 401; // Unauthorized
+                res.status = 401;
             }
             res.set_content(response.dump(4), "application/json");
         } catch(const std::exception &e) {
@@ -102,7 +135,7 @@ int main() {
         }
     });
 
-    // Получить список комнат (с фильтром min_capacity)
+    // Получить список комнат
     svr.Get("/api/v1/rooms", [](const httplib::Request& req, httplib::Response& res) {
         try {
             pqxx::connection conn(get_db_connection_string());
@@ -139,7 +172,7 @@ int main() {
         }
     });
   
-    // Получить список бронирований (всех или с фильтром по интервалу времени)
+    // Получить список бронирований
     svr.Get("/api/v1/bookings", [&](const httplib::Request& req, httplib::Response& res) {
         try {
             pqxx::connection conn(get_db_connection_string());
@@ -243,6 +276,7 @@ int main() {
             json request_data = json::parse(req.body);
             int room_id = request_data["room_id"];
             int user_id = request_data["user_id"]; 
+            int participants_count = request_data.contains("participants_count") ? request_data["participants_count"].get<int>() : 1;
             int start_hour = request_data.contains("start_hour") ? request_data["start_hour"].get<int>() : 0;
             int end_hour = request_data.contains("end_hour") ? request_data["end_hour"].get<int>() : 24;
 
@@ -259,7 +293,7 @@ int main() {
             pqxx::connection conn(get_db_connection_string());
             pqxx::work txn(conn);
             
-            pqxx::result room_check = txn.exec_params("SELECT id FROM rooms WHERE id = $1;", room_id);
+            pqxx::result room_check = txn.exec_params("SELECT id, capacity FROM rooms WHERE id = $1;", room_id);
             if(room_check.empty()) {
                 response["status"] = "error";
                 response["message"] = "Комната не найдена!";
@@ -268,12 +302,22 @@ int main() {
                 return;
             }
 
+            int room_capacity = room_check[0]["capacity"].as<int>();
+            if(participants_count > room_capacity)
+            {
+                response["status"] = "error";
+                response["message"] = "Количество человек превышает вместимость комнаты";
+                res.status = 400;
+                res.set_content(response.dump(4), "application/json");
+                return;
+            }
+
             pqxx::result user_check = txn.exec_params("SELECT id FROM users WHERE id = $1;", user_id);
             if(user_check.empty()) {
                 response["status"] = "error";
                 response["message"] = "Пользователь не найден!";
                 res.status = 400;
-                res.set_content(response.dump(), "application/json");
+                res.set_content(response.dump(4), "application/json");
                 return;
             }
             
@@ -285,7 +329,7 @@ int main() {
             if (!overlap_check.empty()) {
                 response["status"] = "error";
                 response["message"] = "Этот временной интервал уже забронирован!";
-                res.status = 409; // Conflict
+                res.status = 409;
                 res.set_content(response.dump(4), "application/json");
                 return;
             }
@@ -297,11 +341,27 @@ int main() {
             txn.commit();
 
             int booking_id = insert_res[0]["id"].as<int>();
+
+            try{
+                pqxx::connection conn_notify(get_db_connection_string());
+                pqxx::work txn_notify(conn_notify);
+                pqxx::result u_res = txn_notify.exec_params("SELECT telegram_chat_id FROM users WHERE id = $1;", user_id);
+
+                if (!u_res.empty() && !u_res[0]["telegram_chat_id"].is_null()) {
+                    std::string chat_id = u_res[0]["telegram_chat_id"].as<std::string>();
+                    std::string text = " Ваше бронирование #" + std::to_string(booking_id) + " успешно создано!\n"
+                                       " Комната ID: " + std::to_string(room_id) + "\n"
+                                       " Участников: " + std::to_string(participants_count) + "\n"
+                                       " Время: с " + std::to_string(start_hour) + ":00 до " + std::to_string(end_hour) + ":00";
+                    send_telegram_notification(chat_id, text);
+                }
+            } catch (...) {}
             
             json new_booking = {
                 {"id", booking_id}, 
                 {"room_id", room_id},
                 {"user_id", user_id},
+                {"participants_count", participants_count},
                 {"start_hour", start_hour},
                 {"end_hour", end_hour}
             };
@@ -366,7 +426,6 @@ int main() {
     // Обновить существующее бронирование
     svr.Put("/api/v1/bookings/:id", [](const httplib::Request& req, httplib::Response& res) {
         try {
-           
             int booking_id = std::stoi(req.path_params.at("id"));
             json request_data = json::parse(req.body);
 
@@ -422,14 +481,13 @@ int main() {
     // Удалить бронирование
     svr.Delete("/api/v1/bookings/:id", [](const httplib::Request& req, httplib::Response& res) {
         try {
-            
             int booking_id = std::stoi(req.path_params.at("id"));
 
             pqxx::connection conn(get_db_connection_string());
             pqxx::work txn(conn);
 
             pqxx::result check = txn.exec_params(
-                "SELECT b.id, b.room_id, r.name as room_name, b.user_id, u.username, b.start_hour, b.end_hour "
+                "SELECT b.id, b.room_id, r.name as room_name, b.user_id, u.username, b.start_hour, b.end_hour, u.telegram_chat_id "
                 "FROM bookings b "
                 "JOIN rooms r ON b.room_id = r.id "
                 "JOIN users u ON b.user_id = u.id "
@@ -444,19 +502,26 @@ int main() {
                 return;
             }
 
+            std::string room_name = check[0]["room_name"].as<std::string>();
+
             json deleted_booking = {
                 {"id", check[0]["id"].as<int>()},
                 {"room_id", check[0]["room_id"].as<int>()},
-                {"room_name", check[0]["room_name"].as<std::string>()},
+                {"room_name", room_name},
                 {"user_id", check[0]["user_id"].as<int>()},
                 {"username", check[0]["username"].as<std::string>()},
                 {"start_hour", check[0]["start_hour"].as<int>()},
                 {"end_hour", check[0]["end_hour"].as<int>()}
             };
-
+            
+            std::string chat_id = !check[0]["telegram_chat_id"].is_null() ? check[0]["telegram_chat_id"].as<std::string>() : "";
             txn.exec_params("DELETE FROM bookings WHERE id = $1;", booking_id);
             txn.commit();
 
+            if (!chat_id.empty()) {
+                std::string text = "Ваше бронирование #" + std::to_string(booking_id) + " (" + room_name + ") было отменено.";
+                send_telegram_notification(chat_id, text);
+            }
             json response = {
                 {"status", "success"},
                 {"message", "Бронирование успешно удалено!"},

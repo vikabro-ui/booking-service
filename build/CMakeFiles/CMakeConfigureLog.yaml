@@ -4415,3 +4415,1361 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:2 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_FLOAT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_724e7/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_724e7.dir/build.make CMakeFiles/cmTC_724e7.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_724e7.dir/PQXX_HAVE_CHARCONV_FLOAT.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_724e7.dir/PQXX_HAVE_CHARCONV_FLOAT.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CHARCONV_FLOAT.cxx
+        Linking CXX executable cmTC_724e7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_724e7.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_724e7.dir/PQXX_HAVE_CHARCONV_FLOAT.cxx.o -o cmTC_724e7 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:6 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_INT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d5d51/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d5d51.dir/build.make CMakeFiles/cmTC_d5d51.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_d5d51.dir/PQXX_HAVE_CHARCONV_INT.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_d5d51.dir/PQXX_HAVE_CHARCONV_INT.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CHARCONV_INT.cxx
+        Linking CXX executable cmTC_d5d51
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5d51.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_d5d51.dir/PQXX_HAVE_CHARCONV_INT.cxx.o -o cmTC_d5d51 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:10 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CMP"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_805e5/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_805e5.dir/build.make CMakeFiles/cmTC_805e5.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_805e5.dir/PQXX_HAVE_CMP.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_805e5.dir/PQXX_HAVE_CMP.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CMP.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CMP.cxx: In function ‘int main()’:
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CMP.cxx:8:15: error: ‘cmp_greater’ is not a member of ‘std’
+            8 |   return std::cmp_greater(-1, 2u) && std::cmp_less_equal(3, 0);
+              |               ^~~~~~~~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CMP.cxx:8:15: note: ‘std::cmp_greater’ is only available from C++20 onwards
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CMP.cxx:8:43: error: ‘cmp_less_equal’ is not a member of ‘std’
+            8 |   return std::cmp_greater(-1, 2u) && std::cmp_less_equal(3, 0);
+              |                                           ^~~~~~~~~~~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CMP.cxx:8:43: note: ‘std::cmp_less_equal’ is only available from C++20 onwards
+        gmake[1]: *** [CMakeFiles/cmTC_805e5.dir/build.make:78: CMakeFiles/cmTC_805e5.dir/PQXX_HAVE_CMP.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_805e5/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:14 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CONCEPTS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_aac43/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_aac43.dir/build.make CMakeFiles/cmTC_aac43.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_aac43.dir/PQXX_HAVE_CONCEPTS.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_aac43.dir/PQXX_HAVE_CONCEPTS.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CONCEPTS.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CONCEPTS.cxx:5:4: error: #error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is not set."
+            5 | #  error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is not set."
+              |    ^~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CONCEPTS.cxx:8:4: error: #error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is false."
+            8 | #  error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is false."
+              |    ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_aac43.dir/build.make:78: CMakeFiles/cmTC_aac43.dir/PQXX_HAVE_CONCEPTS.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_aac43/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:18 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CXA_DEMANGLE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9d340/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9d340.dir/build.make CMakeFiles/cmTC_9d340.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_9d340.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_9d340.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CXA_DEMANGLE.cxx
+        Linking CXX executable cmTC_9d340
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d340.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_9d340.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.o -o cmTC_9d340 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:22 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_PURE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b314f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b314f.dir/build.make CMakeFiles/cmTC_b314f.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_b314f.dir/PQXX_HAVE_GCC_PURE.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_b314f.dir/PQXX_HAVE_GCC_PURE.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_GCC_PURE.cxx
+        Linking CXX executable cmTC_b314f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b314f.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_b314f.dir/PQXX_HAVE_GCC_PURE.cxx.o -o cmTC_b314f 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:26 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6c822/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6c822.dir/build.make CMakeFiles/cmTC_6c822.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_6c822.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_6c822.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_GCC_VISIBILITY.cxx
+        Linking CXX executable cmTC_6c822
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c822.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_6c822.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.o -o cmTC_6c822 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:30 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_LIKELY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6bd42/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6bd42.dir/build.make CMakeFiles/cmTC_6bd42.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_6bd42.dir/PQXX_HAVE_LIKELY.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_6bd42.dir/PQXX_HAVE_LIKELY.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx: In function ‘int main(int, char**)’:
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx:7:21: error: ‘because’ was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |                     ^~~~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx:7:30: error: ‘older’ was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |                              ^~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx:7:37: error: ‘C’ was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |                                     ^
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx:7:42: error: ‘standard’ was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |                                          ^~~~~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx:7:3: error: ‘deliberately_fail’ was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |   ^~~~~~~~~~~~~~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_6bd42.dir/build.make:78: CMakeFiles/cmTC_6bd42.dir/PQXX_HAVE_LIKELY.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_6bd42/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:34 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_MULTIDIM"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9314e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9314e.dir/build.make CMakeFiles/cmTC_9314e.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_9314e.dir/PQXX_HAVE_MULTIDIM.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_9314e.dir/PQXX_HAVE_MULTIDIM.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_MULTIDIM.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_MULTIDIM.cxx:5:4: error: #error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is not set."
+            5 | #  error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is not set."
+              |    ^~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_MULTIDIM.cxx:8:4: error: #error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is false."
+            8 | #  error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is false."
+              |    ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_9314e.dir/build.make:78: CMakeFiles/cmTC_9314e.dir/PQXX_HAVE_MULTIDIM.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_9314e/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:38 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_PATH"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_19028/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_19028.dir/build.make CMakeFiles/cmTC_19028.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_19028.dir/PQXX_HAVE_PATH.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_19028.dir/PQXX_HAVE_PATH.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_PATH.cxx
+        Linking CXX executable cmTC_19028
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19028.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_19028.dir/PQXX_HAVE_PATH.cxx.o -o cmTC_19028 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:42 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_POLL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ea784/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ea784.dir/build.make CMakeFiles/cmTC_ea784.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_ea784.dir/PQXX_HAVE_POLL.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_ea784.dir/PQXX_HAVE_POLL.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_POLL.cxx
+        Linking CXX executable cmTC_ea784
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea784.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_ea784.dir/PQXX_HAVE_POLL.cxx.o -o cmTC_ea784 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:46 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SLEEP_FOR"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_94ed9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_94ed9.dir/build.make CMakeFiles/cmTC_94ed9.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_94ed9.dir/PQXX_HAVE_SLEEP_FOR.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_94ed9.dir/PQXX_HAVE_SLEEP_FOR.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SLEEP_FOR.cxx
+        Linking CXX executable cmTC_94ed9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94ed9.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_94ed9.dir/PQXX_HAVE_SLEEP_FOR.cxx.o -o cmTC_94ed9 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:50 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SOURCE_LOCATION"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a63b8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a63b8.dir/build.make CMakeFiles/cmTC_a63b8.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_a63b8.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_a63b8.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx:5:4: error: #error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is not set."
+            5 | #  error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is not set."
+              |    ^~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx:8:4: error: #error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is false."
+            8 | #  error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is false."
+              |    ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_a63b8.dir/build.make:78: CMakeFiles/cmTC_a63b8.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_a63b8/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:54 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SPAN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5e5ee/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5e5ee.dir/build.make CMakeFiles/cmTC_5e5ee.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_5e5ee.dir/PQXX_HAVE_SPAN.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_5e5ee.dir/PQXX_HAVE_SPAN.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SPAN.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SPAN.cxx:5:4: error: #error "No PQXX_HAVE_SPAN: __cpp_lib_span is not set."
+            5 | #  error "No PQXX_HAVE_SPAN: __cpp_lib_span is not set."
+              |    ^~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SPAN.cxx:8:4: error: #error "No PQXX_HAVE_SPAN: __cpp_lib_span is false."
+            8 | #  error "No PQXX_HAVE_SPAN: __cpp_lib_span is false."
+              |    ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_5e5ee.dir/build.make:78: CMakeFiles/cmTC_5e5ee.dir/PQXX_HAVE_SPAN.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_5e5ee/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:58 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SSIZE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5a459/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5a459.dir/build.make CMakeFiles/cmTC_5a459.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_5a459.dir/PQXX_HAVE_SSIZE.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_5a459.dir/PQXX_HAVE_SSIZE.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SSIZE.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SSIZE.cxx:5:4: error: #error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is not set."
+            5 | #  error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is not set."
+              |    ^~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SSIZE.cxx:8:4: error: #error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is false."
+            8 | #  error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is false."
+              |    ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_5a459.dir/build.make:78: CMakeFiles/cmTC_5a459.dir/PQXX_HAVE_SSIZE.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_5a459/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:62 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_STRERROR_R"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8ede5/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8ede5.dir/build.make CMakeFiles/cmTC_8ede5.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_8ede5.dir/PQXX_HAVE_STRERROR_R.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_8ede5.dir/PQXX_HAVE_STRERROR_R.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_STRERROR_R.cxx
+        Linking CXX executable cmTC_8ede5
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ede5.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_8ede5.dir/PQXX_HAVE_STRERROR_R.cxx.o -o cmTC_8ede5 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:66 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_STRERROR_S"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c5a80/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c5a80.dir/build.make CMakeFiles/cmTC_c5a80.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_c5a80.dir/PQXX_HAVE_STRERROR_S.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_c5a80.dir/PQXX_HAVE_STRERROR_S.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_STRERROR_S.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_STRERROR_S.cxx: In function ‘int main()’:
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_STRERROR_S.cxx:10:10: error: ‘strerror_s’ was not declared in this scope; did you mean ‘strerror_r’?
+           10 |   return strerror_s(buf, 200, 1);
+              |          ^~~~~~~~~~
+              |          strerror_r
+        gmake[1]: *** [CMakeFiles/cmTC_c5a80.dir/build.make:78: CMakeFiles/cmTC_c5a80.dir/PQXX_HAVE_STRERROR_S.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_c5a80/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:70 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_THREAD_LOCAL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4100b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4100b.dir/build.make CMakeFiles/cmTC_4100b.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_4100b.dir/PQXX_HAVE_THREAD_LOCAL.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_4100b.dir/PQXX_HAVE_THREAD_LOCAL.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_THREAD_LOCAL.cxx
+        Linking CXX executable cmTC_4100b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4100b.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_4100b.dir/PQXX_HAVE_THREAD_LOCAL.cxx.o -o cmTC_4100b 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:74 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_YEAR_MONTH_DAY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c7938/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c7938.dir/build.make CMakeFiles/cmTC_c7938.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_c7938.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_c7938.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx: In function ‘int main()’:
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx:6:27: error: ‘year’ is not a member of ‘std::chrono’
+            6 |   return int(std::chrono::year{1});
+              |                           ^~~~
+        gmake[1]: *** [CMakeFiles/cmTC_c7938.dir/build.make:78: CMakeFiles/cmTC_c7938.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_c7938/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:78 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "no_need_fslib"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e547e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e547e.dir/build.make CMakeFiles/cmTC_e547e.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_e547e.dir/no_need_fslib.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_e547e.dir/no_need_fslib.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/no_need_fslib.cxx
+        Linking CXX executable cmTC_e547e
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e547e.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_e547e.dir/no_need_fslib.cxx.o -o cmTC_e547e 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:2 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_FLOAT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3810b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3810b.dir/build.make CMakeFiles/cmTC_3810b.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_3810b.dir/PQXX_HAVE_CHARCONV_FLOAT.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_3810b.dir/PQXX_HAVE_CHARCONV_FLOAT.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CHARCONV_FLOAT.cxx
+        Linking CXX executable cmTC_3810b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3810b.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_3810b.dir/PQXX_HAVE_CHARCONV_FLOAT.cxx.o -o cmTC_3810b 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:6 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_INT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_535b8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_535b8.dir/build.make CMakeFiles/cmTC_535b8.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_535b8.dir/PQXX_HAVE_CHARCONV_INT.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_535b8.dir/PQXX_HAVE_CHARCONV_INT.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CHARCONV_INT.cxx
+        Linking CXX executable cmTC_535b8
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_535b8.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_535b8.dir/PQXX_HAVE_CHARCONV_INT.cxx.o -o cmTC_535b8 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:10 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CMP"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_694b3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_694b3.dir/build.make CMakeFiles/cmTC_694b3.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_694b3.dir/PQXX_HAVE_CMP.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_694b3.dir/PQXX_HAVE_CMP.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CMP.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CMP.cxx: In function ‘int main()’:
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CMP.cxx:8:15: error: ‘cmp_greater’ is not a member of ‘std’
+            8 |   return std::cmp_greater(-1, 2u) && std::cmp_less_equal(3, 0);
+              |               ^~~~~~~~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CMP.cxx:8:15: note: ‘std::cmp_greater’ is only available from C++20 onwards
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CMP.cxx:8:43: error: ‘cmp_less_equal’ is not a member of ‘std’
+            8 |   return std::cmp_greater(-1, 2u) && std::cmp_less_equal(3, 0);
+              |                                           ^~~~~~~~~~~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CMP.cxx:8:43: note: ‘std::cmp_less_equal’ is only available from C++20 onwards
+        gmake[1]: *** [CMakeFiles/cmTC_694b3.dir/build.make:78: CMakeFiles/cmTC_694b3.dir/PQXX_HAVE_CMP.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_694b3/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:14 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CONCEPTS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fba12/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fba12.dir/build.make CMakeFiles/cmTC_fba12.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_fba12.dir/PQXX_HAVE_CONCEPTS.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_fba12.dir/PQXX_HAVE_CONCEPTS.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CONCEPTS.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CONCEPTS.cxx:5:4: error: #error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is not set."
+            5 | #  error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is not set."
+              |    ^~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CONCEPTS.cxx:8:4: error: #error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is false."
+            8 | #  error "No PQXX_HAVE_CONCEPTS: __cpp_concepts is false."
+              |    ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_fba12.dir/build.make:78: CMakeFiles/cmTC_fba12.dir/PQXX_HAVE_CONCEPTS.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_fba12/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:18 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CXA_DEMANGLE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_00168/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_00168.dir/build.make CMakeFiles/cmTC_00168.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_00168.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_00168.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_CXA_DEMANGLE.cxx
+        Linking CXX executable cmTC_00168
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00168.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_00168.dir/PQXX_HAVE_CXA_DEMANGLE.cxx.o -o cmTC_00168 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:22 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_PURE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_56379/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_56379.dir/build.make CMakeFiles/cmTC_56379.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_56379.dir/PQXX_HAVE_GCC_PURE.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_56379.dir/PQXX_HAVE_GCC_PURE.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_GCC_PURE.cxx
+        Linking CXX executable cmTC_56379
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56379.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_56379.dir/PQXX_HAVE_GCC_PURE.cxx.o -o cmTC_56379 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:26 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2f7fc/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2f7fc.dir/build.make CMakeFiles/cmTC_2f7fc.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_2f7fc.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_2f7fc.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_GCC_VISIBILITY.cxx
+        Linking CXX executable cmTC_2f7fc
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f7fc.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_2f7fc.dir/PQXX_HAVE_GCC_VISIBILITY.cxx.o -o cmTC_2f7fc 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:30 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_LIKELY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d1788/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d1788.dir/build.make CMakeFiles/cmTC_d1788.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_d1788.dir/PQXX_HAVE_LIKELY.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_d1788.dir/PQXX_HAVE_LIKELY.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx: In function ‘int main(int, char**)’:
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx:7:21: error: ‘because’ was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |                     ^~~~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx:7:30: error: ‘older’ was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |                              ^~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx:7:37: error: ‘C’ was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |                                     ^
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx:7:42: error: ‘standard’ was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |                                          ^~~~~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_LIKELY.cxx:7:3: error: ‘deliberately_fail’ was not declared in this scope
+            7 |   deliberately_fail(because, older, C++, standard);
+              |   ^~~~~~~~~~~~~~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_d1788.dir/build.make:78: CMakeFiles/cmTC_d1788.dir/PQXX_HAVE_LIKELY.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_d1788/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:34 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_MULTIDIM"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ac08f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ac08f.dir/build.make CMakeFiles/cmTC_ac08f.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_ac08f.dir/PQXX_HAVE_MULTIDIM.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_ac08f.dir/PQXX_HAVE_MULTIDIM.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_MULTIDIM.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_MULTIDIM.cxx:5:4: error: #error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is not set."
+            5 | #  error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is not set."
+              |    ^~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_MULTIDIM.cxx:8:4: error: #error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is false."
+            8 | #  error "No PQXX_HAVE_MULTIDIM: __cpp_multidimensional_subscript is false."
+              |    ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_ac08f.dir/build.make:78: CMakeFiles/cmTC_ac08f.dir/PQXX_HAVE_MULTIDIM.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_ac08f/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:38 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_PATH"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_242b0/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_242b0.dir/build.make CMakeFiles/cmTC_242b0.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_242b0.dir/PQXX_HAVE_PATH.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_242b0.dir/PQXX_HAVE_PATH.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_PATH.cxx
+        Linking CXX executable cmTC_242b0
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_242b0.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_242b0.dir/PQXX_HAVE_PATH.cxx.o -o cmTC_242b0 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:42 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_POLL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b92f4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b92f4.dir/build.make CMakeFiles/cmTC_b92f4.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_b92f4.dir/PQXX_HAVE_POLL.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_b92f4.dir/PQXX_HAVE_POLL.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_POLL.cxx
+        Linking CXX executable cmTC_b92f4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b92f4.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_b92f4.dir/PQXX_HAVE_POLL.cxx.o -o cmTC_b92f4 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:46 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SLEEP_FOR"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_60a39/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_60a39.dir/build.make CMakeFiles/cmTC_60a39.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_60a39.dir/PQXX_HAVE_SLEEP_FOR.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_60a39.dir/PQXX_HAVE_SLEEP_FOR.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SLEEP_FOR.cxx
+        Linking CXX executable cmTC_60a39
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60a39.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_60a39.dir/PQXX_HAVE_SLEEP_FOR.cxx.o -o cmTC_60a39 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:50 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SOURCE_LOCATION"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3bc8b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3bc8b.dir/build.make CMakeFiles/cmTC_3bc8b.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_3bc8b.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_3bc8b.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx:5:4: error: #error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is not set."
+            5 | #  error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is not set."
+              |    ^~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SOURCE_LOCATION.cxx:8:4: error: #error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is false."
+            8 | #  error "No PQXX_HAVE_SOURCE_LOCATION: __cpp_lib_source_location is false."
+              |    ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_3bc8b.dir/build.make:78: CMakeFiles/cmTC_3bc8b.dir/PQXX_HAVE_SOURCE_LOCATION.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_3bc8b/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:54 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SPAN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9a127/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9a127.dir/build.make CMakeFiles/cmTC_9a127.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_9a127.dir/PQXX_HAVE_SPAN.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_9a127.dir/PQXX_HAVE_SPAN.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SPAN.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SPAN.cxx:5:4: error: #error "No PQXX_HAVE_SPAN: __cpp_lib_span is not set."
+            5 | #  error "No PQXX_HAVE_SPAN: __cpp_lib_span is not set."
+              |    ^~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SPAN.cxx:8:4: error: #error "No PQXX_HAVE_SPAN: __cpp_lib_span is false."
+            8 | #  error "No PQXX_HAVE_SPAN: __cpp_lib_span is false."
+              |    ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_9a127.dir/build.make:78: CMakeFiles/cmTC_9a127.dir/PQXX_HAVE_SPAN.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_9a127/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:58 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_SSIZE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bcaef/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bcaef.dir/build.make CMakeFiles/cmTC_bcaef.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_bcaef.dir/PQXX_HAVE_SSIZE.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_bcaef.dir/PQXX_HAVE_SSIZE.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SSIZE.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SSIZE.cxx:5:4: error: #error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is not set."
+            5 | #  error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is not set."
+              |    ^~~~~
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_SSIZE.cxx:8:4: error: #error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is false."
+            8 | #  error "No PQXX_HAVE_SSIZE: __cpp_lib_ssize is false."
+              |    ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_bcaef.dir/build.make:78: CMakeFiles/cmTC_bcaef.dir/PQXX_HAVE_SSIZE.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_bcaef/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:62 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_STRERROR_R"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1fcfb/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1fcfb.dir/build.make CMakeFiles/cmTC_1fcfb.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_1fcfb.dir/PQXX_HAVE_STRERROR_R.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_1fcfb.dir/PQXX_HAVE_STRERROR_R.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_STRERROR_R.cxx
+        Linking CXX executable cmTC_1fcfb
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1fcfb.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_1fcfb.dir/PQXX_HAVE_STRERROR_R.cxx.o -o cmTC_1fcfb 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:66 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_STRERROR_S"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a9e52/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a9e52.dir/build.make CMakeFiles/cmTC_a9e52.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_a9e52.dir/PQXX_HAVE_STRERROR_S.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_a9e52.dir/PQXX_HAVE_STRERROR_S.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_STRERROR_S.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_STRERROR_S.cxx: In function ‘int main()’:
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_STRERROR_S.cxx:10:10: error: ‘strerror_s’ was not declared in this scope; did you mean ‘strerror_r’?
+           10 |   return strerror_s(buf, 200, 1);
+              |          ^~~~~~~~~~
+              |          strerror_r
+        gmake[1]: *** [CMakeFiles/cmTC_a9e52.dir/build.make:78: CMakeFiles/cmTC_a9e52.dir/PQXX_HAVE_STRERROR_S.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_a9e52/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:70 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_THREAD_LOCAL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_96a02/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_96a02.dir/build.make CMakeFiles/cmTC_96a02.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_96a02.dir/PQXX_HAVE_THREAD_LOCAL.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_96a02.dir/PQXX_HAVE_THREAD_LOCAL.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_THREAD_LOCAL.cxx
+        Linking CXX executable cmTC_96a02
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96a02.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_96a02.dir/PQXX_HAVE_THREAD_LOCAL.cxx.o -o cmTC_96a02 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:74 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_YEAR_MONTH_DAY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e2806/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e2806.dir/build.make CMakeFiles/cmTC_e2806.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_e2806.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_e2806.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx: In function ‘int main()’:
+        /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/PQXX_HAVE_YEAR_MONTH_DAY.cxx:6:27: error: ‘year’ is not a member of ‘std::chrono’
+            6 |   return int(std::chrono::year{1});
+              |                           ^~~~
+        gmake[1]: *** [CMakeFiles/cmTC_e2806.dir/build.make:78: CMakeFiles/cmTC_e2806.dir/PQXX_HAVE_YEAR_MONTH_DAY.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_e2806/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/pqxx-src/cmake/pqxx_cxx_feature_checks.cmake:78 (try_compile)"
+      - "build/_deps/pqxx-src/cmake/config.cmake:44 (include)"
+      - "build/_deps/pqxx-src/CMakeLists.txt:27 (include)"
+    directories:
+      source: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+      binary: "/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vikabro/back/project1/build/_deps/pqxx-src/cmake"
+    buildResult:
+      variable: "no_need_fslib"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3049f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3049f.dir/build.make CMakeFiles/cmTC_3049f.dir/build
+        gmake[1]: Entering directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_3049f.dir/no_need_fslib.cxx.o
+        /usr/bin/g++   -std=c++17 -o CMakeFiles/cmTC_3049f.dir/no_need_fslib.cxx.o -c /home/vikabro/back/project1/build/_deps/pqxx-src/config-tests/no_need_fslib.cxx
+        Linking CXX executable cmTC_3049f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3049f.dir/link.txt --verbose=1
+        /usr/bin/g++ CMakeFiles/cmTC_3049f.dir/no_need_fslib.cxx.o -o cmTC_3049f 
+        gmake[1]: Leaving directory '/home/vikabro/back/project1/build/_deps/pqxx-build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+...

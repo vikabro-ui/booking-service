@@ -3,6 +3,8 @@ project(project1 CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+find_package(OpenSSL REQUIRED)
+
 include(FetchContent)
 FetchContent_Declare(
     cpp-httplib
@@ -28,4 +30,13 @@ set(SKIP_BUILD_TEST ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(pqxx)
 
 add_executable(booking_service main.cpp)
-target_link_libraries(booking_service PRIVATE httplib::httplib nlohmann_json::nlohmann_json pqxx)
+
+target_compile_definitions(booking_service PRIVATE CPPHTTPLIB_OPENSSL_SUPPORT)
+
+target_link_libraries(booking_service PRIVATE 
+    httplib::httplib 
+    nlohmann_json::nlohmann_json 
+    pqxx 
+    OpenSSL::SSL 
+    OpenSSL::Crypto
+)
