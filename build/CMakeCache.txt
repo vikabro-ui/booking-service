@@ -405,7 +405,7 @@ OPENSSL_SSL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libssl.so
 PKG_CONFIG_ARGN:STRING=
 
 //pkg-config executable
-PKG_CONFIG_EXECUTABLE:FILEPATH=PKG_CONFIG_EXECUTABLE-NOTFOUND
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //The Set the PostgreSQL_INCLUDE_DIR cmake cache entry to the top-level
 // directory containing the PostgreSQL include directories. E.g
@@ -463,6 +463,12 @@ nlohmann_json_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 nlohmann_json_SOURCE_DIR:STATIC=/home/vikabro/back/project1/build/_deps/nlohmann_json-src
 
+//Path to a library.
+pkgcfg_lib__OPENSSL_crypto:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
+
+//Path to a library.
+pkgcfg_lib__OPENSSL_ssl:FILEPATH=/usr/lib/x86_64-linux-gnu/libssl.so
+
 //Dependencies for the target
 pqxx_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libpq.so;
 
@@ -484,10 +490,85 @@ project1_SOURCE_DIR:STATIC=/home/vikabro/back/project1
 Brotli_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Brotli_common
 Brotli_common-ADVANCED:INTERNAL=1
+Brotli_common_CFLAGS:INTERNAL=
+Brotli_common_CFLAGS_I:INTERNAL=
+Brotli_common_CFLAGS_OTHER:INTERNAL=
+Brotli_common_FOUND:INTERNAL=
+Brotli_common_INCLUDEDIR:INTERNAL=
+Brotli_common_LIBDIR:INTERNAL=
+Brotli_common_LIBS:INTERNAL=
+Brotli_common_LIBS_L:INTERNAL=
+Brotli_common_LIBS_OTHER:INTERNAL=
+Brotli_common_LIBS_PATHS:INTERNAL=
+Brotli_common_MODULE_NAME:INTERNAL=
+Brotli_common_PREFIX:INTERNAL=
+Brotli_common_STATIC_CFLAGS:INTERNAL=
+Brotli_common_STATIC_CFLAGS_I:INTERNAL=
+Brotli_common_STATIC_CFLAGS_OTHER:INTERNAL=
+Brotli_common_STATIC_LIBDIR:INTERNAL=
+Brotli_common_STATIC_LIBS:INTERNAL=
+Brotli_common_STATIC_LIBS_L:INTERNAL=
+Brotli_common_STATIC_LIBS_OTHER:INTERNAL=
+Brotli_common_STATIC_LIBS_PATHS:INTERNAL=
+Brotli_common_VERSION:INTERNAL=
+Brotli_common_libbrotlicommon_INCLUDEDIR:INTERNAL=
+Brotli_common_libbrotlicommon_LIBDIR:INTERNAL=
+Brotli_common_libbrotlicommon_PREFIX:INTERNAL=
+Brotli_common_libbrotlicommon_VERSION:INTERNAL=
 //ADVANCED property for variable: Brotli_decoder
 Brotli_decoder-ADVANCED:INTERNAL=1
+Brotli_decoder_CFLAGS:INTERNAL=
+Brotli_decoder_CFLAGS_I:INTERNAL=
+Brotli_decoder_CFLAGS_OTHER:INTERNAL=
+Brotli_decoder_FOUND:INTERNAL=
+Brotli_decoder_INCLUDEDIR:INTERNAL=
+Brotli_decoder_LIBDIR:INTERNAL=
+Brotli_decoder_LIBS:INTERNAL=
+Brotli_decoder_LIBS_L:INTERNAL=
+Brotli_decoder_LIBS_OTHER:INTERNAL=
+Brotli_decoder_LIBS_PATHS:INTERNAL=
+Brotli_decoder_MODULE_NAME:INTERNAL=
+Brotli_decoder_PREFIX:INTERNAL=
+Brotli_decoder_STATIC_CFLAGS:INTERNAL=
+Brotli_decoder_STATIC_CFLAGS_I:INTERNAL=
+Brotli_decoder_STATIC_CFLAGS_OTHER:INTERNAL=
+Brotli_decoder_STATIC_LIBDIR:INTERNAL=
+Brotli_decoder_STATIC_LIBS:INTERNAL=
+Brotli_decoder_STATIC_LIBS_L:INTERNAL=
+Brotli_decoder_STATIC_LIBS_OTHER:INTERNAL=
+Brotli_decoder_STATIC_LIBS_PATHS:INTERNAL=
+Brotli_decoder_VERSION:INTERNAL=
+Brotli_decoder_libbrotlidec_INCLUDEDIR:INTERNAL=
+Brotli_decoder_libbrotlidec_LIBDIR:INTERNAL=
+Brotli_decoder_libbrotlidec_PREFIX:INTERNAL=
+Brotli_decoder_libbrotlidec_VERSION:INTERNAL=
 //ADVANCED property for variable: Brotli_encoder
 Brotli_encoder-ADVANCED:INTERNAL=1
+Brotli_encoder_CFLAGS:INTERNAL=
+Brotli_encoder_CFLAGS_I:INTERNAL=
+Brotli_encoder_CFLAGS_OTHER:INTERNAL=
+Brotli_encoder_FOUND:INTERNAL=
+Brotli_encoder_INCLUDEDIR:INTERNAL=
+Brotli_encoder_LIBDIR:INTERNAL=
+Brotli_encoder_LIBS:INTERNAL=
+Brotli_encoder_LIBS_L:INTERNAL=
+Brotli_encoder_LIBS_OTHER:INTERNAL=
+Brotli_encoder_LIBS_PATHS:INTERNAL=
+Brotli_encoder_MODULE_NAME:INTERNAL=
+Brotli_encoder_PREFIX:INTERNAL=
+Brotli_encoder_STATIC_CFLAGS:INTERNAL=
+Brotli_encoder_STATIC_CFLAGS_I:INTERNAL=
+Brotli_encoder_STATIC_CFLAGS_OTHER:INTERNAL=
+Brotli_encoder_STATIC_LIBDIR:INTERNAL=
+Brotli_encoder_STATIC_LIBS:INTERNAL=
+Brotli_encoder_STATIC_LIBS_L:INTERNAL=
+Brotli_encoder_STATIC_LIBS_OTHER:INTERNAL=
+Brotli_encoder_STATIC_LIBS_PATHS:INTERNAL=
+Brotli_encoder_VERSION:INTERNAL=
+Brotli_encoder_libbrotlienc_INCLUDEDIR:INTERNAL=
+Brotli_encoder_libbrotlienc_LIBDIR:INTERNAL=
+Brotli_encoder_libbrotlienc_PREFIX:INTERNAL=
+Brotli_encoder_libbrotlienc_VERSION:INTERNAL=
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -736,28 +817,51 @@ ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
-_OPENSSL_CFLAGS:INTERNAL=
+_OPENSSL_CFLAGS:INTERNAL=-I/usr/include
 _OPENSSL_CFLAGS_I:INTERNAL=
 _OPENSSL_CFLAGS_OTHER:INTERNAL=
-_OPENSSL_FOUND:INTERNAL=
-_OPENSSL_INCLUDEDIR:INTERNAL=
-_OPENSSL_LIBDIR:INTERNAL=
+_OPENSSL_FOUND:INTERNAL=1
+_OPENSSL_INCLUDEDIR:INTERNAL=/usr/include
+_OPENSSL_INCLUDE_DIRS:INTERNAL=/usr/include
+_OPENSSL_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lssl;-lcrypto
+_OPENSSL_LDFLAGS_OTHER:INTERNAL=
+_OPENSSL_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+_OPENSSL_LIBRARIES:INTERNAL=ssl;crypto
+_OPENSSL_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
 _OPENSSL_LIBS:INTERNAL=
 _OPENSSL_LIBS_L:INTERNAL=
 _OPENSSL_LIBS_OTHER:INTERNAL=
 _OPENSSL_LIBS_PATHS:INTERNAL=
-_OPENSSL_MODULE_NAME:INTERNAL=
-_OPENSSL_PREFIX:INTERNAL=
-_OPENSSL_STATIC_CFLAGS:INTERNAL=
+_OPENSSL_MODULE_NAME:INTERNAL=openssl
+_OPENSSL_PREFIX:INTERNAL=/usr
+_OPENSSL_STATIC_CFLAGS:INTERNAL=-I/usr/include
 _OPENSSL_STATIC_CFLAGS_I:INTERNAL=
 _OPENSSL_STATIC_CFLAGS_OTHER:INTERNAL=
+_OPENSSL_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include
+_OPENSSL_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lssl;-L/usr/lib/x86_64-linux-gnu;-ldl;-pthread;-lcrypto;-ldl;-pthread
+_OPENSSL_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread
 _OPENSSL_STATIC_LIBDIR:INTERNAL=
+_OPENSSL_STATIC_LIBRARIES:INTERNAL=ssl;dl;crypto;dl
+_OPENSSL_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu;/usr/lib/x86_64-linux-gnu
 _OPENSSL_STATIC_LIBS:INTERNAL=
 _OPENSSL_STATIC_LIBS_L:INTERNAL=
 _OPENSSL_STATIC_LIBS_OTHER:INTERNAL=
 _OPENSSL_STATIC_LIBS_PATHS:INTERNAL=
-_OPENSSL_VERSION:INTERNAL=
+_OPENSSL_VERSION:INTERNAL=3.0.13
+_OPENSSL_openssl_INCLUDEDIR:INTERNAL=
+_OPENSSL_openssl_LIBDIR:INTERNAL=
+_OPENSSL_openssl_PREFIX:INTERNAL=
+_OPENSSL_openssl_VERSION:INTERNAL=
+__pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
+__pkg_config_checked_Brotli_common:INTERNAL=1
+__pkg_config_checked_Brotli_decoder:INTERNAL=1
+__pkg_config_checked_Brotli_encoder:INTERNAL=1
 __pkg_config_checked__OPENSSL:INTERNAL=1
 //Result of TRY_COMPILE
 no_need_fslib:INTERNAL=TRUE
+//ADVANCED property for variable: pkgcfg_lib__OPENSSL_crypto
+pkgcfg_lib__OPENSSL_crypto-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib__OPENSSL_ssl
+pkgcfg_lib__OPENSSL_ssl-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 

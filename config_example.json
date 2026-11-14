@@ -1,0 +1,8 @@
+{
+    "telegram_bot_token": "YOUR_BOT_TOKEN_HERE",
+    "db_host": "127.0.0.1",
+    "db_port": 5432,
+    "db_name": "booking_db",
+    "db_user": "postgres",
+    "db_password": "YOUR_DB_PASSWORD_HERE"
+}

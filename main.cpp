@@ -1,5 +1,6 @@
 #include <exception>
 #include <iostream>
+#include <fstream>
 #include "httplib.h"
 #include <nlohmann/json.hpp>
 #include <vector>
@@ -8,15 +9,48 @@
 
 using json = nlohmann::json;
 
-const std::string TELEGRAM_BOT_TOKEN = "9106271602:AAGitfCML-VyslVEQpJksCvY2K1Ur0Ir7w0";
+struct AppConfig {
+    std::string telegram_bot_token;
+    std::string db_host;
+    int db_port;
+    std::string db_name;
+    std::string db_user;
+    std::string db_password;
+};
+
+AppConfig load_config(const std::string& filepath) {
+    std::ifstream file(filepath);
+    if (!file.is_open()) {
+        throw std::runtime_error("Не удалось открыть файл конфигурации: " + filepath + ". Убедитесь, что он создан!");
+    }
+    
+    json j;
+    file >> j;
+
+    AppConfig cfg;
+    cfg.telegram_bot_token = j.value("telegram_bot_token", "");
+    cfg.db_host = j.value("db_host", "127.0.0.1");
+    cfg.db_port = j.value("db_port", 5432);
+    cfg.db_name = j.value("db_name", "booking_db");
+    cfg.db_user = j.value("db_user", "postgres");
+    cfg.db_password = j.value("db_password", "");
+    
+    return cfg;
+}
+
+AppConfig global_config = load_config("config.json");
 
 std::string get_db_connection_string() {
-    return "dbname=booking_db user=postgres password=12082008 host=127.0.0.1 port=5432";
+    return "dbname=" + global_config.db_name + 
+           " user=" + global_config.db_user + 
+           " password=" + global_config.db_password + 
+           " host=" + global_config.db_host + 
+           " port=" + std::to_string(global_config.db_port);
 }
 
 void send_telegram_notification(const std::string& chat_id, const std::string& message)
 {
-    if (chat_id.empty() || TELEGRAM_BOT_TOKEN.empty())
+    if (chat_id.empty() || global_config.telegram_bot_token.empty())
     {
         return;
     }
@@ -31,7 +65,7 @@ void send_telegram_notification(const std::string& chat_id, const std::string& m
             {"chat_id", chat_id},
             {"text", message}
         };
-        std::string path = "/bot" + TELEGRAM_BOT_TOKEN + "/sendMessage";
+        std::string path = "/bot" + global_config.telegram_bot_token + "/sendMessage";
         auto res = cli.Post(path.c_str(), payload.dump(), "application/json");
         if (res && res->status == 200) 
         {
@@ -59,7 +93,6 @@ int main() {
 
     httplib::Server svr;
 
-    // Регистрация 
     svr.Post("/api/v1/register", [&](const httplib::Request& req, httplib::Response& res) {
         try {
             json request_data = json::parse(req.body);
@@ -102,7 +135,6 @@ int main() {
         }
     });
 
-    // Вход
     svr.Post("/api/v1/login", [&](const httplib::Request& req, httplib::Response& res) {
         try {
             json request_data = json::parse(req.body);
@@ -135,7 +167,6 @@ int main() {
         }
     });
 
-    // Получить список комнат
     svr.Get("/api/v1/rooms", [](const httplib::Request& req, httplib::Response& res) {
         try {
             pqxx::connection conn(get_db_connection_string());
@@ -172,7 +203,6 @@ int main() {
         }
     });
   
-    // Получить список бронирований
     svr.Get("/api/v1/bookings", [&](const httplib::Request& req, httplib::Response& res) {
         try {
             pqxx::connection conn(get_db_connection_string());
@@ -219,7 +249,6 @@ int main() {
         }
     });
 
-    // Получить историю бронирования конкретного пользователя 
     svr.Get("/api/v1/users/:id/bookings", [&](const httplib::Request& req, httplib::Response& res) {
         try {
             int user_id = std::stoi(req.path_params.at("id"));
@@ -270,7 +299,6 @@ int main() {
         }
     });
 
-    // Создать бронирование 
     svr.Post("/api/v1/bookings", [&](const httplib::Request& req, httplib::Response& res) {
         try {
             json request_data = json::parse(req.body);
@@ -378,7 +406,6 @@ int main() {
         }
     });
 
-    // Получить конкретное бронирование по ID
     svr.Get("/api/v1/bookings/:id", [](const httplib::Request& req, httplib::Response& res) {
         try {
             int booking_id = std::stoi(req.path_params.at("id"));
@@ -423,7 +450,6 @@ int main() {
         }
     });
 
-    // Обновить существующее бронирование
     svr.Put("/api/v1/bookings/:id", [](const httplib::Request& req, httplib::Response& res) {
         try {
             int booking_id = std::stoi(req.path_params.at("id"));
@@ -478,7 +504,6 @@ int main() {
         }
     });
 
-    // Удалить бронирование
     svr.Delete("/api/v1/bookings/:id", [](const httplib::Request& req, httplib::Response& res) {
         try {
             int booking_id = std::stoi(req.path_params.at("id"));
@@ -531,7 +556,7 @@ int main() {
             res.set_content(response.dump(4), "application/json");
 
         } catch (const std::exception &e) {
-            json error = {{"status", "error"}, {"message", e.what()}};
+            json error = {{"status", "error"}, {"message", "Ошибка при удалении бронирования: " + std::string(e.what())}};
             res.status = 500;
             res.set_content(error.dump(4), "application/json");
         }
